@@ -1,0 +1,252 @@
+/* Flexbox-Grundlayout für Body */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Grundlegendes Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* mindestens volle Bildschirmhöhe */
+    background-image: url('images/Gasthof-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center top; /* oben-zentriert anzeigen */
+    background-size: cover; /* ganze Fläche abdecken, Bild wird zugeschnitten */
+    background-attachment: fixed; /* bleibt beim Scrollen stehen (optional) */
+
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url('images/Gasthof-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #823939;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Inhaltshülle, die wächst */
+.pagewrap {
+  flex: 1;
+  
+}
+
+/* Navigation oben zentriert */
+nav {
+    background-color: #000000; /* Schwarzer Hintergrund */
+    display: flex;
+    justify-content: center; /* Zentriert die Navigation */
+    padding: 10px 0;
+}
+
+
+HINTERGRUND
+
+#startseite {
+    background-image: url('images/Gasthof-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+
+  h1 {
+    text-align: center;
+    margin-top: 0;
+    color: white;
+  }
+
+.content {
+  text-align: left;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.443);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 3);
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+  border-radius: 60px;
+  max-width: 1300px; /* oder z.B. 800px – je nach Wunsch */
+  margin: 20px auto;  /* zentriert und schafft Außenabstand */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 10px 16px;
+  color: #000000;
+  background-color: #006c1d;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-menu li a:hover {
+  background-color: #024805;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Hauptinhalt */
+main { 
+    padding: 20px;
+}
+
+
+
+
+
+/* Footer bleibt unten */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  
+}
+ 
+
+  
+  .footer-impressum {
+    margin-top: 10px;
+    background: #333;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .pagewrap {
+    height: auto;
+    min-height: 530vh;
+    flex: 1; /* füllt den verfügbaren Raum und schiebt Footer nach unten */
+  }
+
+
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    font-family: 'Georgia', serif; /* edle Serifenschrift */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+
+
+
+  /*SPEISEKARTE*/
+
+  .menu-container {
+    max-width: 1000px;
+    padding: 20px;
+    margin: 40px auto;
+  
+    /* Rahmen */
+    border: 2px solid #ffffff;
+    border-radius: 16px;
+    background-color: #01530d7d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  
+    /* Verschiebbare Positionierung */
+    position: absolute; /* oder relative, fixed, je nach Bedarf */
+    top: 250px; /* vertikale Position */
+    left: 600px; /* horizontale Position */
+    z-index: 10;
+  }
+  
+  .menu-section {
+    margin-bottom: 40px;
+  }
+  
+  .menu-section h2 {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    color: #ffffff;
+  }
+  
+  .menu-item-name {
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+  
+  .menu-item-price {
+    color: #ffffff;
+  }
+  
+  .menu-item-description {
+    font-size: 0.9em;
+    color: #ffffff;
+    margin-top: 4px;
+  }
+  
+  /* Responsives Verhalten */
+  @media (max-width: 600px) {
+    .menu-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-item-price {
+      margin-top: 5px;
+    }
+  }
+  
+
+  /*GERICHTE*/
+
+  .gericht-bild {
+    position: absolute;
+    width: 230px;
+    height: auto;
+    border-radius: 15px;                 /* Abgerundete Ecken */
+    border: 3px solid #a94442;           /* Farbliche Umrandung (z. B. weinrot) */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Tieferer Schatten für 3D-Effekt */
+    transition: transform 0.3s ease;
+    z-index: 20;
+  }
+  
+  .gericht-bild:hover {
+    transform: scale(1.07);              /* Leichter Zoom beim Überfahren */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Intensiverer Schatten beim Hover */
+  }
+  

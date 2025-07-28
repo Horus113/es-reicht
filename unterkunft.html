@@ -1,0 +1,79 @@
+ <!DOCTYPE html>
+    <html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Landgasthof Schmidt</title>
+    <style>
+            body {
+                /* Zufälliger Hintergrund: hier kannst du verschiedene Farben oder Bilder verwenden */
+                background-color: hsl( Math.floor(Math.random() * 360), 70%, 80% );
+                margin: 0;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                text-align: center; /* Überschrift zentrieren */
+                margin-top: 0;
+            }
+
+            .content {
+                text-align: left; /* Inhalte links ausrichten */
+                max-width: 800px;
+                margin: 20px auto;
+            }
+        </style>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="pagewrap">
+        
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="überuns.html">Über uns</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="Speisekarte.html">Speisekarte</a></li>
+                    <li><a href="Kanuverleih.html">Kanuverleih</a></li>
+                    <li><a href="Unterkunft.html">Unterkunft</a></li>
+                    <li><a href="Öffnungszeiten.html">Öffnungszeiten</a></li>
+                    <li><a href="Galerie.html">Galerie</a></li>
+                </ul>
+            </nav>
+
+            <!-- Hier kannst du den restlichen Inhalt einfügen -->
+            <main> 
+                <section id="startseite">
+                    <h1>Landgasthof Schmidt</h1>
+                    <p></p>
+                </section>
+            </main>
+        
+        
+
+    
+        </div>
+          
+
+        <footer>
+            &copy; 2024 Landgasthof Schmidt
+            <div class="footer-impressum">…Impressum…</div>
+          </footer>
+    
+          <script>
+            let currentIndex = 0;
+            const gallery = document.getElementById('gallery');
+            const images = gallery.querySelectorAll('img');
+    
+            function moveSlide(direction) {
+                currentIndex = (currentIndex + direction + images.length) % images.length;
+                gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+    
+            // Automatisch alle 4 Sekunden wechseln
+            setInterval(() => moveSlide(1), 4000);
+        </script>
+    
+    </body>
+    
+    </html>

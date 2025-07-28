@@ -1,0 +1,122 @@
+ <!DOCTYPE html>
+    <html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Landgasthof Schmidt</title>
+    <style>
+            body {
+                /* Zufälliger Hintergrund: hier kannst du verschiedene Farben oder Bilder verwenden */
+                background-color: hsl( Math.floor(Math.random() * 360), 70%, 80% );
+                margin: 0;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                text-align: center; /* Überschrift zentrieren */
+                margin-top: 0;
+            }
+
+            .content {
+                text-align: left; /* Inhalte links ausrichten */
+                max-width: 800px;
+                margin: 20px auto;
+            }
+        </style>
+        <link rel="stylesheet" href="überuns.css" />
+    </head>
+    <body>
+        <div class="pagewrap">
+        
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="überuns.html">Über uns</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="Speisekarte.html">Speisekarte</a></li>
+                    <li><a href="Kanuverleih.html">Kanuverleih</a></li>
+                    <li><a href="Unterkunft.html">Unterkunft</a></li>
+                    <li><a href="Öffnungszeiten.html">Öffnungszeiten</a></li>
+                    <li><a href="Galerie.html">Galerie</a></li>
+                </ul>
+            </nav>
+
+            <!-- Hier kannst du den restlichen Inhalt einfügen -->
+            <main> 
+                <section id="startseite">
+                    <h1>Über uns</h1>
+                    <p></p>
+                </section>
+
+          
+
+        <div class="timeline">
+            <button class="year-btn" data-year="2020">1840</button>
+            <button class="year-btn" data-year="2021">1907</button>
+            <button class="year-btn" data-year="2022">1968</button>
+            <button class="year-btn" data-year="2023">1990</button>
+            <button class="year-btn" data-year="2020">2007</button>
+            <button class="year-btn" data-year="2021">2008</button>
+            <button class="year-btn" data-year="2022">2012</button>
+            <button class="year-btn" data-year="2023">2013</button>
+            <button class="year-btn" data-year="2020">2015</button>
+            <button class="year-btn" data-year="2021">2018</button>
+            <button class="year-btn" data-year="2022">2022</button>
+            <button class="year-btn" data-year="2023">2025</button>
+          </div>
+          
+          <!-- Inhalte zu den Jahren -->
+          <div id="2020" class="event-content">
+            <h2>Das Jahr 2020</h2>
+            <p>Ein Jahr voller Herausforderungen. Die Welt stand still durch die Corona-Pandemie.</p>
+            <img src="images/2020.jpg" alt="2020">
+          </div>
+          
+          <div id="2021" class="event-content">
+            <h2>Das Jahr 2021</h2>
+            <p>Erste Impfungen brachten Hoffnung, dennoch blieb es ein bewegtes Jahr.</p>
+            <img src="https://source.unsplash.com/800x400/?vaccine" alt="2021">
+          </div>
+          
+          <div id="2022" class="event-content">
+            <h2>Das Jahr 2022</h2>
+            <p>Große Fortschritte in Technik, neue KI-Modelle wurden weltweit diskutiert.</p>
+            <img src="https://source.unsplash.com/800x400/?technology" alt="2022">
+          </div>
+          
+          <div id="2023" class="event-content">
+            <h2>Das Jahr 2023</h2>
+            <p>Viele Länder kehrten zur Normalität zurück. Ein Jahr des Aufatmens.</p>
+            <img src="https://source.unsplash.com/800x400/?nature" alt="2023">
+          </div>
+
+
+        </div>
+        <footer>
+            &copy; 2024 Landgasthof Schmidt
+            <div class="footer-impressum">…Impressum…</div>
+          </footer>
+    
+          <script>
+            const buttons = document.querySelectorAll('.year-btn');
+            const contents = document.querySelectorAll('.event-content');
+          
+            buttons.forEach(button => {
+              button.addEventListener('click', () => {
+                const year = button.dataset.year;
+          
+                // Buttons zurücksetzen
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+          
+                // Inhalte umschalten
+                contents.forEach(content => {
+                  content.style.display = content.id === year ? 'block' : 'none';
+                });
+              });
+            });
+          </script>
+    
+    </body>
+    
+    </html>

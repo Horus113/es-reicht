@@ -1,0 +1,402 @@
+/* Flexbox-Grundlayout für Body */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Grundlegendes Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* mindestens volle Bildschirmhöhe */
+    background-image: url('images/Gasthof-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center top; /* oben-zentriert anzeigen */
+    background-size: cover; /* ganze Fläche abdecken, Bild wird zugeschnitten */
+    background-attachment: fixed; /* bleibt beim Scrollen stehen (optional) */
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url('images/Gasthof-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #823939;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Inhaltshülle, die wächst */
+.pagewrap {
+  flex: 1;
+  
+}
+
+/* Navigation oben zentriert */
+nav {
+    background-color: #000000; /* Schwarzer Hintergrund */
+    display: flex;
+    justify-content: center; /* Zentriert die Navigation */
+    padding: 10px 0;
+}
+
+
+HINTERGRUND
+
+#startseite {
+    background-image: url('images/Gasthof-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+
+  h1 {
+    text-align: center;
+    margin-top: 0;
+    color: white;
+  }
+
+.content {
+  text-align: left;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.443);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 3);
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+  border-radius: 60px;
+  max-width: 1300px; /* oder z.B. 800px – je nach Wunsch */
+  margin: 20px auto;  /* zentriert und schafft Außenabstand */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 10px 16px;
+  color: #000000;
+  background-color: #006c1d;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-menu li a:hover {
+  background-color: #024805;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Hauptinhalt */
+main { 
+    padding: 20px;
+}
+
+
+POLAROID
+
+.picture-container {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+  }
+  
+
+  
+  .picture-container .polaroid:after {
+    content: attr(polaroid-caption);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 30px);
+    padding: 10px;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.2rem;
+  }
+  
+
+  .picture-container .image1 { left: 200px; top: 30px; transform: rotate(-7deg); }
+  .picture-container .image2 { left: 900px; top: 530px; transform: rotate(-7deg); }
+  .picture-container .image3 { left: 200px; top: 1030px; transform: rotate(7deg); }
+  .picture-container .image4 { left: 900px; top: 1530px; transform: rotate(-7deg); }
+  .picture-container .image5 { left: 200px; top: 2030px; transform: rotate(-7deg); }
+  .picture-container .image6 { left: 900px; top: 2530px; transform: rotate(7deg); }
+  .picture-container .image7 { left: 200px; top: 3030px; transform: rotate(-7deg); }
+  .picture-container .image8 { left: 900px; top: 3530px; transform: rotate(-7deg); }
+  .picture-container .image9 { left: 200px; top: 4030px; transform: rotate(7deg); }
+  .picture-container .image10 { left: 900px; top: 4530px; transform: rotate(7deg); }
+
+
+
+  .picture-container .polaroid {
+    position: absolute;
+    border: 1px solid darkgrey;
+    background-color: white;
+    padding: 10px 10px 40px;          /* weniger Rand unten für Caption */
+    box-shadow: 3px 6px 6px rgba(0,0,0,0.3);
+    width: 300px;                     /* feste Breite */
+    font-size: 0.8rem;                /* bedeutend kleinere Schrift */  
+  }
+  
+  .picture-container .polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .picture-container {
+  position: relative; /* notwendig, damit absolute Positionierung funktioniert */
+  width: 100%;
+  height: 400px; /* oder min-height je nach Bedarf */
+}
+
+.polaroid {
+  position: absolute;
+  border: 1px solid darkgrey;
+  background-color: white;
+  padding: 10px 10px 40px;
+  box-shadow: 3px 6px 6px rgba(1, 67, 23, 0.3);
+  width: 120px;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+/*Footer*/
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  
+}
+ 
+
+  
+  .footer-impressum {
+    margin-top: 10px;
+    background: #333;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .pagewrap {
+    height: auto;
+    min-height: 600vh;
+    flex: 1; /* füllt den verfügbaren Raum und schiebt Footer nach unten */
+  }
+
+
+
+
+
+
+  /*TEXTKASTEN*/
+
+  .freier-textkasten1 {
+    position: absolute;     /* erlaubt freie Platzierung */
+    top: 300px;              /* Abstand von oben */
+    left: 900px;             /* Abstand von links */
+    max-width: 700px;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: rgba(2, 65, 3, 0.76);
+    color: #ffffff;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10;
+  }
+
+  .freier-textkasten2 {
+    position: absolute;     /* erlaubt freie Platzierung */
+    top: 850px;              /* Abstand von oben */
+    left: 200px;             /* Abstand von links */
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: rgba(3, 71, 20, 0.85);
+    color: #ffffff;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10;
+  }
+
+  .freier-textkasten3 {
+    position: absolute;     /* erlaubt freie Platzierung */
+    top: 1350px;              /* Abstand von oben */
+    left: 900px;             /* Abstand von links */
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: rgba(3, 71, 20, 0.85);
+    color: #ffffff;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10;
+  }
+
+  .freier-textkasten4 {
+    position: absolute;     /* erlaubt freie Platzierung */
+    top: 1850px;              /* Abstand von oben */
+    left: 200px;             /* Abstand von links */
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: rgba(3, 71, 20, 0.85);
+    color: #ffffff;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10;
+  }
+
+  .freier-textkasten5 {
+    position: absolute;     /* erlaubt freie Platzierung */
+    top: 2350px;              /* Abstand von oben */
+    left: 900px;             /* Abstand von links */
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: rgba(3, 71, 20, 0.85);
+    color: #ffffff;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10;
+  }
+
+  .freier-textkasten6 {
+    position: absolute;     /* erlaubt freie Platzierung */
+    top: 2850px;              /* Abstand von oben */
+    left: 200px;             /* Abstand von links */
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: rgba(3, 71, 20, 0.85);
+    color: #ffffff;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10;
+  }
+
+  .freier-textkasten7 {
+    position: absolute;     /* erlaubt freie Platzierung */
+    top: 3350px;              /* Abstand von oben */
+    left: 900px;             /* Abstand von links */
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: rgba(3, 71, 20, 0.85);
+    color: #ffffff;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10;
+  }
+
+  .freier-textkasten8 {
+    position: absolute;     /* erlaubt freie Platzierung */
+    top: 3850px;              /* Abstand von oben */
+    left: 200px;             /* Abstand von links */
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: rgba(3, 71, 20, 0.85);
+    color: #ffffff;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10;
+  }
+
+  .freier-textkasten9 {
+    position: absolute;     /* erlaubt freie Platzierung */
+    top: 4350px;              /* Abstand von oben */
+    left: 900px;             /* Abstand von links */
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: rgba(3, 71, 20, 0.85);
+    color: #ffffff;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10;
+  }
+
+  .freier-textkasten10 {
+    position: absolute;     /* erlaubt freie Platzierung */
+    top: 4850px;              /* Abstand von oben */
+    left: 200px;             /* Abstand von links */
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid white;
+    background-color: rgba(3, 71, 20, 0.85);
+    color: #ffffff;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 10;
+  }
+
+
+  
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    font-family: 'Georgia', serif; /* edle Serifenschrift */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+
+
+

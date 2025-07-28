@@ -1,0 +1,224 @@
+/* Flexbox-Grundlayout für Body */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Grundlegendes Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* mindestens volle Bildschirmhöhe */
+    background-image: url('images/Gasthof-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center top; /* oben-zentriert anzeigen */
+    background-size: cover; /* ganze Fläche abdecken, Bild wird zugeschnitten */
+    background-attachment: fixed; /* bleibt beim Scrollen stehen (optional) */
+
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url('images/Gasthof-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #122b09;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Inhaltshülle, die wächst */
+.pagewrap {
+  flex: 1;
+  
+}
+
+/* Navigation oben zentriert */
+nav {
+    background-color: #000000; /* Schwarzer Hintergrund */
+    display: flex;
+    justify-content: center; /* Zentriert die Navigation */
+    padding: 10px 0;
+}
+
+
+HINTERGRUND
+
+#startseite {
+    background-image: url('images/Gasthof-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+
+  h1 {
+    text-align: center;
+    margin-top: 0;
+    color: white;
+  }
+
+.content {
+  text-align: left;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.443);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 3);
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+  border-radius: 60px;
+  max-width: 1300px; /* oder z.B. 800px – je nach Wunsch */
+  margin: 20px auto;  /* zentriert und schafft Außenabstand */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 10px 16px;
+  color: #000000;
+  background-color: #006c1d;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-menu li a:hover {
+  background-color: #024805;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Hauptinhalt */
+main { 
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+/* Footer bleibt unten */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  
+}
+ 
+
+  
+  .footer-impressum {
+    margin-top: 10px;
+    background: #333;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .pagewrap {
+    height: auto;
+    min-height: 130vh;
+    flex: 1; /* füllt den verfügbaren Raum und schiebt Footer nach unten */
+  }
+
+
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    font-family: 'Georgia', serif; /* edle Serifenschrift */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+
+
+
+
+  
+  .oeffnungszeiten-box {
+    position: absolute; /* ermöglicht freie Platzierung */
+    top: 300px;          /* Abstand von oben */
+    left: 500px;         /* Abstand von links */
+    z-index: 10;
+    background-color: rgb(249, 249, 249);
+    border: 2px solid #019340;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+
+  
+  
+  .oeffnungszeiten-box h2 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  .oeffnungszeiten-tabelle {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .oeffnungszeiten-tabelle td:first-child {
+    font-weight: bold;
+    width: 40%;
+    padding-right: 10px;
+  }
+  
+  .oeffnungszeiten-tabelle td {
+    padding: 8px 0;
+  }
+  
+  .hinweis {
+    margin-top: 30px;
+    text-align: center;
+    font-style: italic;
+    color: #000000;
+  }
+  
+
+
+ 

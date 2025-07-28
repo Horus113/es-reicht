@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+    <html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Landgasthof Schmidt</title>
+    <style>
+            body {
+                /* Zufälliger Hintergrund: hier kannst du verschiedene Farben oder Bilder verwenden */
+                background-color: hsl( Math.floor(Math.random() * 360), 70%, 80% );
+                margin: 0;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                text-align: center; /* Überschrift zentrieren */
+                margin-top: 0;
+            }
+
+            .content {
+                text-align: left; /* Inhalte links ausrichten */
+                max-width: 800px;
+                margin: 20px auto;
+            }
+        </style>
+        <link rel="stylesheet" href="kanuverleih.css" />
+    </head>
+    <body>
+        <div class="pagewrap">
+        
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="überuns.html">Über uns</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="Speisekarte.html">Speisekarte</a></li>
+                    <li><a href="Kanuverleih.html">Kanuverleih</a></li>
+                    <li><a href="Unterkunft.html">Unterkunft</a></li>
+                    <li><a href="Öffnungszeiten.html">Öffnungszeiten</a></li>
+                    <li><a href="Galerie.html">Galerie</a></li>
+                </ul>
+            </nav>
+
+            <!-- Hier kannst du den restlichen Inhalt einfügen -->
+            <main> 
+                <section id="startseite">
+                    <h1>Kanuverleih</h1>
+                    <p></p>
+                </section>
+            </main>
+              
+            <div class="freier-textkasten1">
+                <p><h2>Herzlich willkommen im Landgasthof im </h2></p>
+                <p><h2>Biosphärenreservat Flusslandschaft Elbe!</h2></p>
+                <p>Machen Sie einen kleinen Streifzug durch unser Haus im idyllischen Cumlosen – direkt am Elberadweg und mitten in der einzigartigen Natur der Prignitz. Verschaffen Sie sich einen Eindruck von unserem liebevoll geführten Landgasthof und unseren vielfältigen Angeboten.</p>
+                <p>Sie sind mit dem Rad unterwegs und suchen eine gemütliche Unterkunft mit gutem Abendessen und Frühstück? Oder möchten Sie einfach dem Alltag entfliehen und Ruhe und Erholung zu fairen Preisen genießen?</p>
+                <p>Dann sind Sie bei uns genau richtig.</p>
+                <p>Wir sind ein familiengeführter Betrieb inmitten der Elbtalaue – nur wenige Meter hinter dem Elbdeich, an der ehemaligen innerdeutschen Grenze. Genießen Sie bei uns Natur, Gastfreundschaft und regionale Küche in herzlicher Atmosphäre.</p>
+              </div>
+
+        
+        </div>
+          
+
+        <footer>
+            &copy; 2024 Landgasthof Schmidt
+            <div class="footer-impressum">…Impressum…</div>
+          </footer>
+    
+          <script>
+            let currentIndex = 0;
+            const gallery = document.getElementById('gallery');
+            const images = gallery.querySelectorAll('img');
+    
+            function moveSlide(direction) {
+                currentIndex = (currentIndex + direction + images.length) % images.length;
+                gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+    
+            // Automatisch alle 4 Sekunden wechseln
+            setInterval(() => moveSlide(1), 4000);
+        </script>
+    
+    </body>
+    
+    </html>
